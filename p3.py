@@ -15,7 +15,7 @@ fabric = np.zeros((tw, th), dtype=np.uint16)
 for x1, y1, x2, y2, _ in rects:
     fabric[x1:x2, y1:y2] += 1
 
-for x, y, w, h, id in rects:
+for x1, y1, x2, y2, id in rects:
     if np.all(fabric[x1:x2, y1:y2] == 1):
         print(id)
         break
